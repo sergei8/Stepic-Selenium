@@ -8,3 +8,6 @@ class LoginPageLocators():
     LOGIN_FORM_ID = (By.ID, "login_form")
     REGISTER_FORM_ID = (By.ID, "register_form")
     
+class ProductPageLocators():
+    BASKET_BUTTON = (By.CLASS_NAME, 'btn-add-to-basket')
+    
