@@ -42,31 +42,38 @@ def test_product_price(browser):
     product_page.add_to_basket()
     product_page.choosen_product_price_is_correct()
     
-    
-# TODO
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     # Открываем страницу товара 
-    # Добавляем товар в корзину 
+    product_page = ProductPage(browser, product_page_link)
+    product_page.open()
+
+    # Добавляем товар в корзину
+    product_page.add_to_basket()
     # Проверяем, что нет сообщения об успехе с помощью is_not_element_present
+    product_page.should_not_be_success_message()
 
-    pass
-
-# TODO
 def test_guest_cant_see_success_message(browser):
     '''
     Открываем страницу товара 
     Проверяем, что нет сообщения об успехе с помощью is_not_element_present'''
-    pass
+    product_page = ProductPage(browser, product_page_link)
+    product_page.open()
+    product_page.should_not_be_success_message()
 
-# TODO
 def test_message_disappeared_after_adding_product_to_basket(browser):
     '''
     Открываем страницу товара
     Добавляем товар в корзину
     Проверяем, что нет сообщения об успехе с помощью is_disappeared'''
     
-    pass
+    # Открываем страницу товара 
+    product_page = ProductPage(browser, product_page_link)
+    product_page.open()
 
+    # Добавляем товар в корзину
+    product_page.add_to_basket()
+
+    product_page.should_disapeared_message()
 
 
 
