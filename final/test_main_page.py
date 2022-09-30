@@ -43,3 +43,7 @@ def test_correct_login_link(browser):
     login_page_link = browser.current_url
     login_page = LoginPage(browser, login_page_link)
     login_page.should_be_login_url(login_page_link)
+
+# TODO
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    pass  

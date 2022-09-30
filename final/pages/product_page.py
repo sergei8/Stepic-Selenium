@@ -30,15 +30,7 @@ class ProductPage(BasePage):
     
     def should_disapeared_message(self):
         assert self.is_not_element_present(*ProductPageLocators.PRODUCT_ADDED_SUCCESS), \
-        "Success message is presented, but should not be"
-        
-    # TODO
-    def test_guest_should_see_login_link_on_product_page(browser):
-        link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
-        page = ProductPage(browser, link)
-        page.open()
-        page.should_be_login_link()       
-        
+        "Success message is presented, but should not be"        
              
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
